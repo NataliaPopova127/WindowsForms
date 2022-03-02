@@ -29,6 +29,11 @@ namespace WindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult dialog = MessageBox.Show("Вы хотите завершить работу?", "Завершение программы", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(dialog == DialogResult.Yes)
+            {
+                this.Close();
+            }
             Close();
         }
     }
